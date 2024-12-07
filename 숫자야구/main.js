@@ -39,6 +39,8 @@ submitBtn.addEventListener('click',function() {
         console.log("4스트라이크 겜을 승리하셨습니다.");
         console.log("도전횟수 : "+count);
         start.disabled = false;
+        num_box = [];
+        count = 0;
     }else {
         console.log(strike+"스트라이크");
     }
