@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>투두리스트</h2>
+    <input type="text" name="content" id="content">
+    <input type="button" class="contBtn" value="입력" onclick="addCont()" style="display: flex; width: 306.5px;">
+    <h2>목록</h2>
+    <ul id="fruits">
+    </ul>
+</body>
+<script>
+    const txt = document.querySelector('#content');
+
+    function addCont() {
+        const val = txt.value;
+        const li = document.createElement("li");
+        li.setAttribute("id",val);
+        const textNode = document.createTextNode(val);
+        li.appendChild(textNode);
+        document.getElementById('fruits').appendChild(li);
+    }
+</script>
+</html>
